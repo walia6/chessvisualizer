@@ -82,6 +82,7 @@ This will create a `games.pgn` file from the July 2014 rated standard games.
 From the project root:
 
 ```bash
+chmod +x generate_heatmap.sh
 ./generate_heatmap.sh games.pgn output.png
 ```
 
