@@ -11,7 +11,7 @@ This project is built to demonstrate the capabilities of [`walia6/chesslib`](htt
 
 ## Key Features
 
-- Parses thousands of PGN games and processes them concurrently.
+- Parses millions (even billions) of PGN games and processes them concurrently.
 - Visualizes where specific pieces tend to end up in games that end in checkmate or a draw.
 - Renders a 2×6 grid of heatmaps (King, Queen, Rook, Bishop, Knight, Pawn × checkmate/draw outcomes).
 - Cleanly integrates Java and Python through a simple pipeline.
