@@ -4,7 +4,6 @@
 
 This project is built to demonstrate the capabilities of [`walia6/chesslib`](https://github.com/walia6/chesslib), a pure Java chess engine and utility library used to parse, validate, and analyze chess positions at scale.
 
-
 ![output](./output.png)
 
 ---
@@ -67,26 +66,46 @@ This repository does **not** include a PGN file. To fetch your own dataset, visi
 
 - [https://database.lichess.org/](https://database.lichess.org/)
 
-You can use `curl` and `zstdcat` to download and decompress a PGN in one command. For example:
+You can download and decompress PGN files in one command using `curl` and `zstdcat`:
 
 ```bash
-curl https://database.lichess.org/standard/lichess_db_standard_rated_2014-07.pgn.zst | zstdcat > games.pgn
+curl -s https://database.lichess.org/standard/lichess_db_standard_rated_2014-07.pgn.zst | zstdcat > games.pgn
 ```
-
-This will create a `games.pgn` file from the July 2014 rated standard games.
 
 ---
 
 ## Usage
 
-From the project root:
+### Standard Usage (with a saved PGN file)
 
 ```bash
 chmod +x generate_heatmap.sh
 ./generate_heatmap.sh games.pgn output.png
 ```
 
-This will run the Java analyzer and pipe its output into the Python visualizer. The final heatmap will be saved to `output.png`.
+This runs the Java analyzer and pipes its output into the Python visualizer. The heatmap is saved as `output.png`.
+
+### Alternative: Stream PGNs Without Saving to Disk
+
+To avoid storing a massive `.pgn` file on disk, you can use a named pipe:
+
+```bash
+mkfifo stream.pgn
+```
+
+Then run the analyzer in one terminal:
+
+```bash
+./generate_heatmap.sh stream.pgn output.png
+```
+
+And in another terminal, stream the PGNs directly into the pipe:
+
+```bash
+curl -s https://database.lichess.org/standard/lichess_db_standard_rated_2014-07.pgn.zst | zstdcat > stream.pgn
+```
+
+This streams data through the analyzer and visualizer in real-time without writing the full PGN to disk.
 
 ---
 
