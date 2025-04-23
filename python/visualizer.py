@@ -75,7 +75,7 @@ for line in sys.stdin:
     if line == "game":
         games_processed += 1
         if games_processed % 100_000 == 0:
-            print(f"[INFO] {games_processed:,} games processed...")
+            print(f"[INFO] {games_processed} games processed...")
         continue
     if len(line) < 3:
         continue
@@ -129,7 +129,7 @@ fig.suptitle("Most common square for...¹", fontsize=26, color='white')
 fig.patch.set_facecolor('#2f2f2f')
 plt.subplots_adjust(wspace=0.2, hspace=0.0, left=0.05, right=0.95, top=0.88, bottom=0.05)
 
-fig.text(0.98, 0.01, f"¹{games_processed} games processed",
+fig.text(0.98, 0.01, f"¹{add_commas(games_processed)} games processed",
          fontsize=8, color='white', ha='right', va='bottom')
 
 fig.savefig(sys.argv[1], dpi=100, facecolor=fig.get_facecolor())
