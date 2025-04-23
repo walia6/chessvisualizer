@@ -4,6 +4,9 @@
 
 This project is built to demonstrate the capabilities of [`walia6/chesslib`](https://github.com/walia6/chesslib), a pure Java chess engine and utility library used to parse, validate, and evaluate chess positions at scale.
 
+
+![output](./output.png)
+
 ---
 
 ## Key Features
@@ -86,12 +89,6 @@ This will run the Java analyzer and pipe its output into the Python visualizer. 
 
 ---
 
-## Example Output
-
-![output](./output.png)
-
----
-
 ## License
 
-MIT — see `LICENSE`.
+MIT-0 — see `LICENSE`.
