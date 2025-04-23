@@ -112,3 +112,9 @@ This streams data through the analyzer and visualizer in real-time without writi
 ## License
 
 MIT-0 — see `LICENSE`.
+
+---
+
+## Acknowledgments
+
+Inspired by this Reddit post: [What’s the most common checkmate position in 400 million games of chess \[OC\]?](https://www.reddit.com/r/DataArt/comments/9en6k1/whats_the_most_common_checkmate_position_in_400/)
