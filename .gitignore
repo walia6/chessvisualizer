@@ -1,0 +1,33 @@
+# Maven build artifacts
+java/checkmatevisualizer/target/
+**/target/
+
+# IntelliJ / Eclipse / VSCode project files
+.idea/
+*.iml
+*.classpath
+*.project
+.vscode/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Output files
+target/heatmaps.png
+
+# Dependency-reduced pom
+java/checkmatevisualizer/dependency-reduced-pom.xml
+
+data/*.pgn
