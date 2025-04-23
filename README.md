@@ -70,7 +70,7 @@ This repository does **not** include a PGN file. To fetch your own dataset, visi
 You can use `curl` and `zstdcat` to download and decompress a PGN in one command. For example:
 
 ```bash
-curl -S https://database.lichess.org/standard/lichess_db_standard_rated_2014-07.pgn.zst | zstdcat > games.pgn
+curl https://database.lichess.org/standard/lichess_db_standard_rated_2014-07.pgn.zst | zstdcat > games.pgn
 ```
 
 This will create a `games.pgn` file from the July 2014 rated standard games.
