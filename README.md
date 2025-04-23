@@ -1,6 +1,6 @@
 # Chess Visualizer
 
-**Chess Visualizer** is a tool for analyzing spatial trends in chess endgames. It extracts final board positions from a large set of games and visualizes those positions using heatmaps. The visualization focuses on two specific outcomes: checkmate and draw.
+**Chess Visualizer** is a tool for analyzing spatial trends in chess games. It extracts final board positions from a large set of games and visualizes those positions using heatmaps. The visualization focuses on two specific outcomes: checkmate and draw.
 
 This project is built to demonstrate the capabilities of [`walia6/chesslib`](https://github.com/walia6/chesslib), a pure Java chess engine and utility library used to parse, validate, and evaluate chess positions at scale.
 
