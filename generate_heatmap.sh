@@ -23,7 +23,7 @@ PGN_FILE="$1"
 OUTPUT_FILE="$2"
 
 # Check if PGN file exists
-if [ ! -f "$PGN_FILE" ]; then
+if [ ! -e "$PGN_FILE" ]; then
     echo "[ERROR] PGN file '$PGN_FILE' does not exist."
     exit 2
 fi
