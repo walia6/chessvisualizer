@@ -31,3 +31,4 @@ target/heatmaps.png
 java/checkmatevisualizer/dependency-reduced-pom.xml
 
 data/*.pgn
+*.pgn

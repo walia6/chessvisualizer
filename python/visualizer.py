@@ -127,4 +127,4 @@ plt.subplots_adjust(wspace=0.2, hspace=0.0, left=0.05, right=0.95, top=0.88, bot
 fig.text(0.98, 0.01, f"¹{add_commas(games_processed)} games processed",
          fontsize=8, color='white', ha='right', va='bottom')
 
-fig.savefig("target/heatmaps.png", dpi=100, facecolor=fig.get_facecolor())
+fig.savefig("heatmaps.png", dpi=100, facecolor=fig.get_facecolor())
