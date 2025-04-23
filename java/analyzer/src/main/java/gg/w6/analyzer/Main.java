@@ -1,4 +1,4 @@
-package gg.w6.checkmatevisualizer;
+package gg.w6.analyzer;
 
 import gg.w6.chesslib.model.*;
 import gg.w6.chesslib.model.piece.*;
@@ -55,7 +55,7 @@ public class Main {
         final ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         final Semaphore semaphore = new Semaphore(32); // Limit concurrency
 
-        final File pgnFile = Paths.get("./data/lichess.pgn").toAbsolutePath().toFile();
+        final File pgnFile = Paths.get(args[0]).toAbsolutePath().toFile();
 
         try (final PgnDatabaseSplitter splitter = new PgnDatabaseSplitter(pgnFile)) {
             for(final String gameString : splitter) {
